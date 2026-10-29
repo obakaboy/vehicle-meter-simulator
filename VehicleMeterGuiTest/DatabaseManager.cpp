@@ -21,14 +21,14 @@ DatabaseManager::~DatabaseManager()
 		m_database.close();
 	}
 
-	//テスト用
+	//Qtに登録したDB接続を解放する
 	const QString connectionName =
 		m_database.connectionName();
 
 	m_database = QSqlDatabase();
 
 	QSqlDatabase::removeDatabase(connectionName);
-	//ここまで
+	
 }
 
 bool DatabaseManager::open(const QString& databasePath)
