@@ -175,7 +175,3 @@ ctest --test-dir out/build/debug --output-on-failure
 | DB | 空DBの履歴・集計、1件保存と読み出し、NULL燃費、保存ID降順、NULLを含む集計、テーブル未作成時の保存失敗 |
 
 DBテストはSQLiteの `:memory:` を使い、実際の `vehicle_meter.db` を変更しません。GoogleTestのケース数は合計43件です。CTestでは車両ロジック36件とDB実行ファイル1件として登録されるため、合計37件と表示されます。画面操作や描画を確認するGUI自動テストは含みません。
-
-## 公開するファイル
-
-ソース、UI定義、CMake設定、テスト、README、スクリーンショットを管理します。ビルド出力、個人用IDE設定、生成DB、プロジェクトのバックアップZIP、研修申請書、成果発表資料は `.gitignore` で除外します。
