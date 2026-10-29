@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindowClass</class>
+ <widget class="QMainWindow" name="MainWindowClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Vehicle Meter Simulator</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+    <item>
+     <widget class="QWidget" name="meterContainer" native="true">
+      <layout class="QHBoxLayout" name="meterLayout">
+       <item>
+        <widget class="SpeedometerWidget" name="speedometerWidget" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>400</width>
+           <height>400</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="infoWidget" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>220</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>250</width>
+           <height>16777215</height>
+          </size>
+         </property>
+
+         <layout class="QGridLayout" name="gridLayout">
+
+ <item row="0" column="0">
+  <widget class="QLabel" name="powerTitleLabel">
+   <property name="text">
+    <string>POWER</string>
+   </property>
+  </widget>
+ </item>
+
+ <item row="0" column="1">
+  <widget class="QLabel" name="powerStatusLabel">
+   <property name="text">
+    <string>OFF</string>
+   </property>
+  </widget>
+ </item>
+
+ <item row="1" column="0">
+  <widget class="QLabel" name="accTitleLabel">
+   <property name="text">
+    <string>ACC</string>
+   </property>
+  </widget>
+ </item>
+
+ <item row="1" column="1">
+  <widget class="QLabel" name="accStatusLabel">
+   <property name="text">
+    <string>OFF</string>
+   </property>
+  </widget>
+ </item>
+
+ <item row="3" column="0">
+  <widget class="QLabel" name="driveModeTitleLabel">
+   <property name="text">
+    <string>Drive Mode</string>
+   </property>
+  </widget>
+ </item>
+
+ <item row="3" column="1">
+  <widget class="QLabel" name="driveModeStatusLabel">
+   <property name="text">
+    <string>NORMAL</string>
+   </property>
+  </widget>
+ </item>
+
+ <item row="2" column="0">
+ <widget class="QLabel" name="accTargetTitleLabel">
+  <property name="text">
+   <string>ACC SET</string>
+  </property>
+ </widget>
+</item>
+
+<item row="2" column="1">
+ <widget class="QLabel" name="accTargetValueLabel">
+  <property name="text">
+   <string>-- km/h</string>
+  </property>
+ </widget>
+</item>
+
+<item row="4" column="0">
+ <widget class="QLabel" name="instantFuelTitleLabel">
+  <property name="text">
+   <string>INST FE</string>
+  </property>
+ </widget>
+</item>
+
+<item row="4" column="1">
+ <widget class="QLabel" name="instantFuelValueLabel">
+  <property name="text">
+   <string>-- km/L</string>
+  </property>
+ </widget>
+</item>
+
+<item row="5" column="0">
+ <widget class="QLabel" name="averageFuelTitleLabel">
+  <property name="text">
+   <string>AVG FE</string>
+  </property>
+ </widget>
+</item>
+
+<item row="5" column="1">
+ <widget class="QLabel" name="averageFuelValueLabel">
+  <property name="text">
+   <string>-- km/L</string>
+  </property>
+ </widget>
+</item>
+
+</layout>
+
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="fuelContainer" native="true">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>70</height>
+       </size>
+      </property>
+      <layout class="QHBoxLayout" name="fuelLayout">
+       <item>
+        <widget class="QLabel" name="fuelTitleLabel">
+         <property name="text">
+          <string>FUEL</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="fuelBar">
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="value">
+          <number>75</number>
+         </property>
+         <property name="textVisible">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="fuelValueLabel">
+         <property name="text">
+          <string>75%</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>SpeedometerWidget</class>
+   <extends>QWidget</extends>
+   <header>SpeedometerWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
