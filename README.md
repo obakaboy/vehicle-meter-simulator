@@ -52,7 +52,6 @@ ACCは設定速度を維持する機能です。先行車の認識や車間距�
 ├── CMakePresets.json           # Qtの共通設定（非表示プリセットのみ）
 ├── VehicleMeterGuiTest/
 │   ├── CMakeLists.txt          # アプリ・ライブラリ・テストの定義
-│   ├── qt.cmake
 │   ├── main.cpp
 │   ├── MainWindow.*            # 入力・更新・表示と保存処理の呼び出し
 │   ├── SpeedometerWidget.*     # 速度計の描画
